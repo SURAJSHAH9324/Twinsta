@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-full min-h-screen bg-zinc-900 text-white p-10">
+        <div class="flex justify-end">
+            <a class="bg-red-500 hover:bg-red-700 transition duration-300 px-3 py-2 inline-block rounded-md"
+                href="/logout">Logout</a>
+        </div>
+        <h5 class="text-sm text-zinc-400">Update your thoughts...</h5>
+        <form action="/update/<%= post._id%>" method="post">
+            <textarea placeholder="What's on your mind?"
+                class="p-3 block w-1/2 resize-none bg-transparent outline-none border-none border-2 bg-zinc-800 rounded-md mt-5 focus:ring-2 focus:ring-blue-500"
+                name="content">
+                <%= post.content%>
+            </textarea>
+            <input type="submit"
+                class="px-3 block py-2 bg-yellow-500 hover:bg-blue-700 transition duration-300 rounded-md mt-2"
+                value="Update Post">
+        </form>
+       
+        
+
+    </div>
+    </div>
+</body>
+
+</html>
